@@ -6,11 +6,12 @@ public class PlayerController : MonoBehaviour
 {
 
     Rigidbody RB;
-    Vector2 PlayerInput, cameraInput;
+    Vector2 PlayerInput;
 
-    public Transform cam;
+    public Camera Cam;
+
     public float MoveSpeed = 10;
-    public Vector2 CamSens;
+    public float CamSens;
 
     float CamX;
 
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody>();
+        Cam = GetComponentInChildren<Camera>();
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -27,20 +29,27 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Movement();
+
+        if(Input.GetKeyDown(KeyCode.X))
+        {
+            WeaponFire();
+        }
     }
 
     void Movement()
     {
-        PlayerInput.x = Input.GetAxis("Horizontal") * MoveSpeed;
+        PlayerInput.x = Input.GetAxis("Horizontal");
         PlayerInput.y = Input.GetAxis("Vertical") * MoveSpeed;
 
-        cameraInput.x = Input.GetAxis("Mouse X") * CamSens.x;
-        cameraInput.y = Input.GetAxis("Mouse Y");
+        transform.Rotate(0, PlayerInput.x * CamSens * Time.deltaTime, 0);
+        RB.velocity = transform.forward * PlayerInput.y + transform.right * 0 + transform.up * RB.velocity.y;
+    }
 
-        transform.Rotate(0, cameraInput.x, 0);
-        CamX = cam.transform.localEulerAngles.x - cameraInput.y * CamSens.y;
-
-        cam.localEulerAngles = new Vector3(CamX, 0, 0);
-        RB.velocity = transform.forward * PlayerInput.y + transform.right * PlayerInput.x + transform.up * RB.velocity.y;
+    void WeaponFire()
+    {
+        if(Physics.Raycast(Cam.transform.position, Cam.transform.forward, out RaycastHit Hit))
+        {
+            print(Hit.transform.name);
+        }
     }
 }
