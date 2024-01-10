@@ -357,11 +357,15 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Enemy/EnemyController.cs"
+"Assets/Scripts/Enemy/EnemySpawner.cs"
 "Assets/Scripts/Pickups/PickupScript.cs"
 "Assets/Scripts/Player/PlayerController.cs"
+"Assets/Scripts/Player/ScoreManager.cs"
 "Assets/Scripts/Shared/ExplosionEffect.cs"
 "Assets/Scripts/Shared/ProjectileScript.cs"
 "Assets/Scripts/Shared/StatScript.cs"
+"Assets/Scripts/UI/CustomSlider.cs"
+"Assets/Scripts/UI/MainMenu.cs"
 -langversion:9.0
 
 /deterministic

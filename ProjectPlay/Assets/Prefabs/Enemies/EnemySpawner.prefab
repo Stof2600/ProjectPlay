@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1581998578899438063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3074919358661173091}
+  - component: {fileID: 4873040432365214686}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3074919358661173091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581998578899438063}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 200, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4873040432365214686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581998578899438063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55dbfe6f1b8593f4998b8aa272bcdf15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyPrefabs:
+  - {fileID: 2816671375071498416, guid: 4d6ceea8494c12e409e6dcfdc1e9abd3, type: 3}
+  - {fileID: 2816671375071498416, guid: 8b30c65b92dd74c44a6ccd74dc26fe12, type: 3}
+  - {fileID: 2816671375071498416, guid: c0eb3d4badd715b4fa0fc6b205185227, type: 3}
+  - {fileID: 2816671375071498416, guid: 31db9fd901a20c74dba0bbe51df47c59, type: 3}
+  - {fileID: 2816671375071498416, guid: 92a7825a44f4bad48883f36bcb11bf3b, type: 3}
+  - {fileID: 2816671375071498416, guid: cbebe561cd623b14aacfca4a27a1e3cd, type: 3}
+  - {fileID: 2816671375071498416, guid: e2d9e023203249c4f9bc53c675364bd2, type: 3}
+  - {fileID: 2816671375071498416, guid: 6a989f176a033a847a08d5987e2a7f33, type: 3}
+  SpawnedEnemies: []
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  EnemyCount: 200
+  SpawnLimits: {x: 500, y: 300}
+  SpawnerPrefab: {fileID: 1581998578899438063}

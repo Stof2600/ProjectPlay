@@ -30,6 +30,7 @@ public class ExplosionEffect : MonoBehaviour
             if (Col.GetComponent<EnemyController>())
             {
                 Col.GetComponent<EnemyController>().TakeDamage(Damage);
+                Col.GetComponent<EnemyController>().DamageTick = 0.1f;
             }
         }
     }
